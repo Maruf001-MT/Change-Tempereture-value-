@@ -1,0 +1,58 @@
+<!DOCTYPE.html>
+<html>
+<head>
+   <title></title>
+   <style>
+     button{
+        box-sizing:bordee-box;
+        height:50px;
+        margin:5px;
+        background:#00ff9b;
+        font-size:1.2rem;
+        padding:8px;
+        font-weight:bolder;
+        border:2px solid #ff00de;
+        border-radius:15px;
+ }
+ button:hover{
+    background:#fffa00;
+ }
+
+   </style>
+</head>
+<body>
+ 
+<button onclick="c_f()">°C-°F</button>
+<button onclick="f_c()">°F-°C</button>
+<button onclick="c_k()">°C-°K</button>
+<button onclick="k_c()">°K-°C</button>
+<h1 id="display">❝No result❞</h1>
+</body>
+
+<script>
+
+   var display=document.querySelector("#display");
+   
+   function c_f(){
+      var number=parseInt(prompt("Enter the celcius value:"));
+      var result=(9*number)/5+32;
+      display.innerHTML="result="+result+"°F";
+   }
+   function f_c(){
+      var number=parseInt(prompt("Enter the fahrenheit value:"));
+      var result=(number-32)*(5/9);
+      display.innerHTML="result="+result+"°C";
+   }
+   function c_k(){
+      var number=parseInt(prompt("Enter the celcius value:"));
+      var result=number+273.15;
+      display.innerHTML="result="+result+"°K";
+   }
+   function k_c(){
+      var number=parseInt(prompt("Enter the Kelvin value:"));
+      var result=number-273.15;
+      display.innerHTML="result="+result+"°C";
+   }
+  
+</script>
+</html>
